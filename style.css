@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(146, 112, 67);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff5733;
+}
+
+#main {
+    padding: 2em;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.main-content img {
+    width: 300px; 
+    border-radius: 8px; 
+}
+
+.main-content p {
+    flex: 1; 
+    font-size: 25px;
+}
+
+#about {
+    display: flex; 
+    padding: 2em;
+    gap: 2em;
+}
+
+#about h2 {
+    margin-bottom: 1em;
+}
+
+.about-content-img img {
+    width: 100%;  
+    max-width: 800px; 
+    border-radius: 8px;
+}
+
+.about-content1, .about-content2 {
+    flex: 1; 
+}
+
+.about-content1 {
+    margin-bottom: 30px; 
+}
+
+.about-content2 {
+    margin-bottom: 30px;
+}
+
+.about-content2 img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+
+/* Змінює напрямок Flexbox для вертикального розташування елементів всередині #about */
+#about > div:nth-child(2), #about > div:nth-child(3) {
+    display: flex;
+    flex-direction: column; 
+    gap: 1em;
+}
+
+h1, h2 {
+    font-size: 40px;
+}
+
+section {
+    padding: 2em;
+}
+
+#gallery {
+    padding: 2em;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 1em;
+}
+
+.image-gallery1, .image-gallery2, .image-gallery3 {
+    display: flex;
+    gap: 1em; 
+    justify-content: center; 
+    margin-bottom: 1em; 
+}
+
+.image-gallery1 img, .image-gallery2 img, .image-gallery3 img{
+    width: 330px; 
+    height: 170px;
+    border-radius: 8px; 
+    transition: transform 0.3s ease; /* анімація */
+}
+
+.image-gallery1 img:hover, .image-gallery2 img:hover, .image-gallery3 img:hover {
+    transform: scale(1.05); /* Збільшення зображення при наведенні */
+}
+
+#projects {
+    display: flex; 
+    padding: 2em;
+    gap: 2em;
+}
+
+.projects img {
+    width: 100%;  
+    max-width: 800px; 
+    border-radius: 8px;
+}
+
+#projects {
+    display: flex; 
+    gap: 2em; 
+    padding: 2em; 
+}
+
+.projects-content1 {
+    flex: 1;
+    text-align: center;
+}
+
+.projects-content1 img {
+    max-width: 100%; 
+    height: auto;
+    margin-top: 1em;
+}
+
+.projects-content2 {
+    flex: 3; 
+}
+
+.projects-content2 table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1em; 
+}
+
+.projects-content2 th, .projects-content2 td {
+    padding: 1em; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+
+.projects-content2 th {
+    background-color: #f5f5f5; 
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    
+}
+
+th {
+    background-color: #f4f4f4;
+    justify-content: center;
+}
+
+#my-inform {
+    display: flex;
+    flex-direction: column; /* Заголовок зверху, а контакти нижче */
+    align-items: center; /* Центрування елементів */
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.links {
+    display: flex; /* Розташування посилань в рядок */
+    gap: 1em; /* Відстань між контактами */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #333; 
+    color: #fff; 
+    border-radius: 50%; 
+    text-decoration: none; 
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.3s; /* Плавні переходи */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Легкий тіньовий ефект */
+}
+
+.contact-item:hover {
+    background-color: #555; /* Зміна кольору при наведенні */
+    transform: scale(1.1); /* Збільшення при наведенні */
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ff5733;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Стиснуте меню */
+header nav {
+    display: flex;    justify-content: center;
+    gap: 1em;}
+
+header nav a {
+    color: #fff;    margin: 0 1em;
+    text-decoration: none;    transition: color 0.3s;
+}
+
+header nav a:hover {    color: #ff5733;
+}
+
+/* Стиль для меню-бургера */
+.menu-icon {
+    display: none;
+    position: absolute;    right: 20px;
+    top: 20px;    cursor: pointer;
+}
+
+.menu-icon img {    
+    width: 30px;
+    height: auto;
+}
+
+/* Відображення меню в мобільному вигляді */
+header nav ul {    
+    list-style-type: none;
+    display: flex;    
+    gap: 1em;
+}
+
+header nav ul li {    
+    display: inline-block;
+}
+
+header nav a {    
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    /* Меню на мобільних */    header nav {
+        display: none;        flex-direction: column;
+        position: absolute;        top: 60px;
+        right: 0;        background-color: #333;
+        width: 100%;        padding: 1em;
+    }
+    header nav.active {        display: flex;
+    }
+.menu {
+    display: none;
+}
+
+    /* Зменшуємо іконку */    
+    .menu-icon {
+        display: block;    
+    }
+
+    /* Зменшуємо ширину картинки у секції Projects */
+    .projects-content1 img {       
+        max-width: 60%;
+    }
+
+    /* Картинка в секції aside-pic */    
+    .aside-pic {
+        max-width: 100%;    
+    }
+
+    /* Змінюємо вигляд головної картинки */
+    .main-content img {        
+        width: 80%;
+        max-width: 250px;    
+    }
+
+    /* Для секції gallery */
+    .image-gallery1 img, .image-gallery2 img, .image-gallery3 img {        
+        width: 100%;
+        max-width: 200px;    
+    }
+
+    /* Розташування секції "Про мене" */
+    #about {        
+        flex-direction: column;
+    }
+
+    .about-content-img img {        
+        width: 100%;
+    }
+
+    /* Секція проектів на мобільних */    
+    #projects {
+        flex-direction: column;        
+        padding: 1em;
+    }
+
+    .projects-content1 {        
+        text-align: center;
+    }
+
+    .projects-content2 table {        
+        width: 100%;
+        font-size: 0.9em;    
+    }
+
+    /* Форма контакту */
+    form input, form textarea, form button {        
+        font-size: 1em;
+    }
+
+    .contact-item {        
+        width: 50px;
+        height: 50px;        
+        font-size: 0.8em;
+    }
+
+    /* Мобільний вигляд галереї */    
+    .image-gallery1, .image-gallery2, .image-gallery3 {
+        flex-direction: column;        
+        align-items: center;
+    }}
+
+
+@media (max-width: 480px) {
+    header h1 { 
+        font-size: 1.5em; 
+        margin-left: 10px; 
+    } 
+    
+    header h1 { 
+        font-size: 1.5em; 
+        margin-left: 10px; 
+    } 
+    
+    .menu a { 
+        padding: 5px; 
+        font-size: 1em; 
+    } 
+    
+    .menu-icon { 
+        width: 30px; 
+        height: 30px; 
+        margin: 10px; 
+    } 
+    
+    .main-content { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+    
+    .main-content p { 
+        font-size: 0.9em; 
+    } 
+    
+    .main-content img { 
+        order: 1; /* Перевага зображення після тексту */ 
+        margin-top: 20px; /* Додатковий відступ зверху */ 
+    }
+
+    h1, h2 {        
+        font-size: 1.5em;
+    }
+
+    .projects-content2 table, .projects-content2 th, .projects-content2 td {        
+        font-size: 0.8em;
+    }
+
+    .contact-item {        
+        width: 40px;
+        height: 40px;        
+        font-size: 0.7em;
+    }}
+
+    /* Клас для активного меню */
+    .active {    
+    display: flex;
+    }
+    
+    /* Глобальні стилі для меню */
+    header nav {
+    display: flex;    
+    justify-content: center;
+    align-items: center;    
+    gap: 1em;
+    }
+
+    /* Мобільний вигляд для секцій */
+    @media (max-width: 768px) {
+
+    header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+    } 
+    
+    .menu { 
+        flex-direction: column; 
+        width: 100%; 
+    } 
+    
+    .menu a { 
+        text-align: center; 
+        padding: 10px; 
+        width: 100%; 
+    } 
+    
+    .menu-icon { 
+        display: block; 
+        margin: 10px 20px; 
+    } 
+    
+    .main-content { 
+        text-align: left; 
+    }
+
+    .image-gallery {        
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    .projects-content1 img {        
+        max-width: 70%;
+        height: auto;    
+    }
+    /* Стилизуємо контактні блоки */
+    .contact-item {        
+        width: 60px;
+        height: 60px;        
+        font-size: 1em;
+    }}
+
+
